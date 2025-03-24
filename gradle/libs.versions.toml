@@ -1,0 +1,52 @@
+[versions]
+agp = "8.4.2"
+gson = "2.11.0"
+kotlin = "1.9.24"
+coreKtx = "1.13.0"
+junit = "4.13.2"
+junitVersion = "1.2.1"
+espressoCore = "3.6.1"
+appcompat = "1.7.0"
+kotlinxCoroutinesCore = "1.9.0"
+material = "1.12.0"
+activity = "1.9.2"
+constraintlayout = "2.2.1"
+orchestrator = "1.5.1"
+runner = "1.6.1"
+testng = "7.8.0"
+uiautomator = "2.3.0"
+volley = "1.2.1"
+monitor = "1.7.2"
+rules = "1.6.1"
+testngVersion = "7.8.0"
+firebaseFirestoreKtx = "25.1.2"
+
+[libraries]
+
+androidx-core = { module = "androidx.test:core", version.ref = "rules" }
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-orchestrator = { module = "androidx.test:orchestrator", version.ref = "orchestrator" }
+androidx-runner-v152 = { module = "androidx.test:runner", version.ref = "runner" }
+androidx-uiautomator = { group = "androidx.test.uiautomator", name = "uiautomator", version.ref = "uiautomator" }
+gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinxCoroutinesCore" }
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinxCoroutinesCore" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+testng = { module = "org.testng:testng", version.ref = "testng" }
+volley = { group = "com.android.volley", name = "volley", version.ref = "volley" }
+androidx-monitor = { group = "androidx.test", name = "monitor", version.ref = "monitor" }
+androidx-rules = { group = "androidx.test", name = "rules", version.ref = "rules" }
+testng-testng = { group = "org.testng", name = "testng", version.ref = "testngVersion" }
+firebase-firestore-ktx = { group = "com.google.firebase", name = "firebase-firestore-ktx", version.ref = "firebaseFirestoreKtx" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+android-library = { id = "com.android.library", version.ref = "agp" }
+

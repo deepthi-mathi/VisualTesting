@@ -1,0 +1,66 @@
+plugins {
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.jetbrains.kotlin.android)
+}
+
+android {
+    namespace 'com.example.visualtesting'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.example.visualtesting"
+        minSdk 24
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = '17'
+    }
+    testOptions {
+        execution 'ANDROIDX_TEST_ORCHESTRATOR'
+    }
+}
+
+dependencies {
+
+    implementation libs.androidx.core.ktx
+    implementation libs.androidx.appcompat
+    implementation libs.androidx.activity
+    implementation libs.androidx.constraintlayout
+    implementation libs.material
+    implementation libs.volley
+    implementation libs.androidx.uiautomator
+    implementation libs.androidx.monitor
+    implementation libs.androidx.rules
+    implementation libs.firebase.firestore.ktx
+
+    //testImplementation libs.junit
+    androidTestImplementation libs.androidx.runner.v152
+    androidTestImplementation libs.androidx.core
+
+    implementation libs.kotlinx.coroutines.core
+    implementation libs.kotlinx.coroutines.android
+
+    androidTestImplementation libs.androidx.junit
+    androidTestImplementation libs.androidx.espresso.core
+    testImplementation libs.testng
+    androidTestImplementation libs.testng.testng
+
+    androidTestUtil libs.androidx.orchestrator
+    implementation libs.gson
+
+}
